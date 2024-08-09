@@ -1,4 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using MinhaApi.Data;
+using MinhaApi.Models;
+using MinhaApi.Services;
+using MinhaApi.Repositories;
 var builder = WebApplication.CreateBuilder(args);
+
+// Configuração do banco de dados
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Registro de repositórios e serviços
+builder.Services.AddScoped<ProductRepository>();
+builder.Services.AddScoped<ProductService>();
+
 
 // Configuração de CORS
 builder.Services.AddCors(options =>
