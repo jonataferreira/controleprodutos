@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getProducts } from '../api';
 import './ProductPage.css';
 
-const ProductPage = ({ products }) => {
+const ProductPage = ({ produto }) => {
 
   const [products, setProducts] = useState([]);
 
