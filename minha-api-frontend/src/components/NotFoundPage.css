@@ -1,0 +1,17 @@
+/* NotFoundPage.css */
+
+.not-found-page {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .not-found-page h1 {
+    font-size: 3em;
+    color: #ff0000;
+  }
+  
+  .not-found-page p {
+    font-size: 1.5em;
+    color: #666;
+  }
+  
